@@ -1,0 +1,16 @@
+name = "crossmint-nft-system"
+main = "src/index.js"
+compatibility_date = "2025-10-01"
+workers_dev = true
+
+[vars]
+# Set at deploy-time or via `wrangler secret put` (recommended for sensitive values)
+CROSSMINT_API_BASE = "https://www.crossmint.com/api"
+CROSSMINT_PROJECT_ID = ""
+CROSSMINT_CLIENT_SECRET = ""  # set via secret!
+SERVICE_AUTH_TOKEN = ""       # optional: simple bearer for your own endpoints
+
+[[d1_databases]]
+binding = "TOIAF_DB"         # available at env.TOIAF_DB
+database_name = "toiaf-crossmint"
+database_id = "TO_FILL_IN_AFTER_CREATE"
